@@ -1,0 +1,143 @@
+:root {
+  --bg: #000;
+  --text: #fff;
+  --accent: #ff0000;
+  --text-dim: #e6e6e6;
+  --border: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Шапка и навигация */
+.site-header {
+  border-bottom: 2px solid var(--accent);
+  background: #050505;
+}
+
+.site-title {
+  margin: 0;
+  padding: 16px 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--bg);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.site-nav a.active {
+  border-color: var(--accent);
+}
+
+/* Контент */
+main {
+  padding: 24px 0 40px;
+}
+
+h2, h3 {
+  color: var(--accent);
+}
+
+p {
+  color: var(--text-dim);
+}
+
+/* Изображения */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 20px 0;
+}
+
+figcaption {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+.hero img {
+  border: 3px solid var(--accent);
+  border-radius: 6px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.gallery figure {
+  background: #0b0b0b;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Список ссылок */
+.link-list {
+  padding-left: 18px;
+}
+
+.link-list a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.link-list a:hover {
+  color: var(--accent);
+}
+
+/* Подвал */
+.site-footer {
+  border-top: 2px solid var(--accent);
+  background: #050505;
+}
+
+.site-footer p {
+  margin: 0;
+  padding: 16px 0;
+  color: var(--text-dim);
+}
